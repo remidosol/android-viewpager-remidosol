@@ -1,4 +1,4 @@
-# Kodluyoruz/Patika.dev First Homework
+# Kodluyoruz/Patika.dev Second Homework
 
 This repository is second homework that has been created for [Android Developer Bootcamp](https://www.patika.dev/bootcamp). It contains a README.md file and Android project that coded via using Kotlin.
 
