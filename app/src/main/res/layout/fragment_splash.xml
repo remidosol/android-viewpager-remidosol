@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--        <com.airbnb.lottie.LottieAnimationView-->
+    <!--            android:id="@+id/healthCircleAnimation"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginHorizontal="@dimen/_16sdp"-->
+    <!--            android:layout_marginVertical="@dimen/_16sdp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:lottie_rawRes="@raw/health_circle"-->
+    <!--            app:lottie_autoPlay="true"-->
+    <!--            app:lottie_loop="false"-->
+    <!--            app:lottie_repeatCount="1"/>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/splashConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="910dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/healthCircleAnimationCover"
+            android:layout_width="@dimen/_500sdp"
+            android:layout_height="@dimen/_450sdp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_110sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/healthCircleAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/health_symbols_15s_1_5x"
+                />
+        </LinearLayout>
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/_175sdp"-->
+        <!--            android:layout_marginHorizontal="@dimen/_16sdp"-->
+        <!--            android:background="@drawable/img"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:src="@mipmap/ic_developer_sign_foreground"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

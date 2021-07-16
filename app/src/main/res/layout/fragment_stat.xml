@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -18,9 +17,11 @@
 
 
         <LinearLayout
-            android:id="@+id/headerLinearLayout2"
+            android:id="@+id/headerLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_40sdp"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,34 +29,31 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/headerTextView1_2"
+                android:id="@+id/headerTextView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_60sdp"
-                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:lineSpacingExtra="@dimen/_2sdp"
-                android:text="@string/running_header_1"
+                android:text="@string/stat_header_1"
                 android:textAlignment="center"
-                android:textColor="@color/bluelike"
-                android:textSize="@dimen/_24ssp"
+                android:textColor="@color/blue_like"
+                android:textSize="@dimen/_28ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:lineHeight="@dimen/_24ssp" />
+                app:lineHeight="@dimen/_28ssp" />
 
             <TextView
-                android:id="@+id/headerTextView2_2"
+                android:id="@+id/headerTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:fontFamily="@font/nunito_sans_semi_bold"
                 android:lineSpacingExtra="@dimen/_2sdp"
-                android:text="@string/running_header_2"
+                android:text="@string/stat_header_2"
                 android:textAlignment="center"
-                android:textColor="@color/another_blacklike2"
+                android:textColor="@color/another_black_like_2"
                 android:textSize="@dimen/_18ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -64,44 +62,46 @@
                 app:lineHeight="@dimen/_18ssp" />
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_35sdp">
 
-            <FrameLayout
+            <ImageView
+                android:id="@+id/statSvg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/statSvg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_70sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"
-                    app:srcCompat="@drawable/ic_health_score"
-                    />
-
-                <View
-                    android:layout_width="@dimen/_400sdp"
-                    android:layout_height="@dimen/_450sdp"
-                    android:background="@drawable/linear_gradient" />
-            </FrameLayout>
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_health_score" />
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animationView2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="@dimen/_80sdp"
-                app:lottie_rawRes="@raw/exercise"
+                android:id="@+id/animationView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/statSvg"
+                app:layout_constraintTop_toTopOf="@+id/statSvg"
                 app:lottie_autoPlay="true"
-                app:lottie_loop="true" />
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/mental_health" />
 
-        </LinearLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linear_gradient"
+                app:layout_constraintBottom_toBottomOf="@+id/statSvg"
+                app:layout_constraintEnd_toEndOf="@+id/statSvg"
+                app:layout_constraintStart_toStartOf="@+id/statSvg"
+                app:layout_constraintTop_toTopOf="@+id/statSvg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

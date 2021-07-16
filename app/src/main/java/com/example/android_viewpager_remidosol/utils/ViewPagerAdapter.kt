@@ -3,7 +3,7 @@ package com.example.android_viewpager_remidosol.utils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.android_viewpager_remidosol.fragments.empty.EmptyFragment
+import com.example.android_viewpager_remidosol.fragments.EmptyFragment
 import com.example.android_viewpager_remidosol.fragments.health.info.HealthInfoFragment
 import com.example.android_viewpager_remidosol.fragments.health.on_the_job.HealthOnTheJobFragment
 import com.example.android_viewpager_remidosol.fragments.health.service.HealthService
@@ -17,9 +17,9 @@ class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activ
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> HealthStatFragment()
+            0 -> HealthInfoFragment()
             1 -> HealthOnTheJobFragment()
-            2 -> HealthInfoFragment()
+            2 -> HealthStatFragment()
             3 -> HealthService()
             4 -> HealthSupport()
             else -> EmptyFragment()

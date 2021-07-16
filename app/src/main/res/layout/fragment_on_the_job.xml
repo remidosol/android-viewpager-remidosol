@@ -7,7 +7,7 @@
     >
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -18,27 +18,27 @@
 
 
         <LinearLayout
-            android:id="@+id/headerLinearLayout2"
+            android:id="@+id/headerLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/headerTextView1_2"
+                android:id="@+id/headerTextView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_60sdp"
-                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:lineSpacingExtra="@dimen/_2sdp"
-                android:text="@string/running_header_1"
+                android:text="@string/on_the_job_header_1"
                 android:textAlignment="textStart"
-                android:textColor="@color/purplelike"
-                android:textSize="@dimen/_24ssp"
+                android:textColor="@color/purple_like"
+                android:textSize="@dimen/_28ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,16 +46,15 @@
                 app:lineHeight="@dimen/_24ssp" />
 
             <TextView
-                android:id="@+id/headerTextView2_2"
+                android:id="@+id/headerTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:fontFamily="@font/nunito_sans_semi_bold"
                 android:lineSpacingExtra="@dimen/_2sdp"
-                android:text="@string/running_header_2"
+                android:text="@string/on_the_job_header_2"
                 android:textAlignment="textEnd"
-                android:textColor="@color/another_blacklike"
+                android:textColor="@color/another_black_like"
                 android:textSize="@dimen/_18ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,33 +72,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp">
 
                 <ImageView
                     android:id="@+id/onTheJobSvg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_70sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"
-                    app:srcCompat="@drawable/ic_health_on_the_job"
-                    />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_health_on_the_job" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/exercise" />
 
                 <View
-                    android:layout_width="@dimen/_400sdp"
-                    android:layout_height="@dimen/_450sdp"
-                    android:background="@drawable/linear_gradient" />
-            </FrameLayout>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animationView2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="@dimen/_80sdp"
-                app:lottie_rawRes="@raw/teal_healthy_heart"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linear_gradient"
+                    app:layout_constraintBottom_toBottomOf="@+id/onTheJobSvg"
+                    app:layout_constraintEnd_toEndOf="@+id/onTheJobSvg"
+                    app:layout_constraintStart_toStartOf="@+id/onTheJobSvg"
+                    app:layout_constraintTop_toTopOf="@+id/onTheJobSvg" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 

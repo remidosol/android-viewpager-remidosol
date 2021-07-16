@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">android_viewpager_remidosol</string>
-    <string name="running_header_1">Why wouldn't you want to know your body status?</string>
+    <string name="running_header_1">Why would not you want to know your body status?</string>
     <string name="running_header_2">Do not deceive yourself!</string>
+
+    <string name="on_the_job_header_1">Are you dieting?</string>
+    <string name="on_the_job_header_2">What would you say to crown this diet with a cardio?</string>
+
+    <string name="stat_header_1">Do you hear\nwhat\nthe your body says?</string>
+    <string name="stat_header_2">Let\'s take a look together your body\'s statistics.</string>
+
+    <string name="service_header_1">All checks will be done\nwhen\nyou are ready.</string>
+    <string name="service_header_2">Do never consume yourself!</string>
+
+    <string name="support_header_1">Support is always on the way as long as you want.</string>
+    <string name="support_header_2">We just a click away from you.</string>
+
+    <string name="info_message">This is the second homework of Yemeksepeti Android Developer Bootcamp.\n\nPatika.dev/Kodluyoruz</string>
+
+    <string name="okey">Ok</string>
+    <string name="info">Info</string>
+    <string name="thanks">Thanks for your preview.</string>
+    <string name="touch_that">Touch that ></string>
+
 </resources>
